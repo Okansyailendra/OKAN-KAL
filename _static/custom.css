@@ -1,1 +1,14 @@
+/* Mengganti background halaman utama */
+body {
+    background-image: url('https://pin.it/ZrT97JFU4'); /* Letakkan gambar di folder _static */
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Opsional: Ubah warna teks agar kontras dengan background */
+h1, h2, h3, p, a {
+    color: white;
+}
 
