@@ -391,76 +391,9 @@
 <h1>PENJELASAN INVERS MATRIKS<a class="headerlink" href="#notebooks-with-myst-markdown" title="Link to this heading">#</a></h1>
 <p>Invers matriks adalah kebalikan dari sebuah matriks yang jika dikalikan dengan matriks asalnya akan menghasilkan matriks identitas. 
   Invers matriks dilambangkan dengan pangkat -1 di atas huruf matriksnya, misalnya A-1. </p>
-<section id="an-example-cell">
-<h2>Langkah 1: Menuliskan Matriks</h2>
-<p>Sistem persamaan diberikan dalam bentuk:</p>
-<div>
-$$
-  5x_1 + 4x_2 - 2x_3 = 5 \\
-  7x_1 + 2x_2 + 4x_3 = 7 \\
-  3x_1 + 2x_2 - 6x_3 = 3
-$$
-</div>
-  
-<p>Kita tuliskan dalam bentuk matriks:</p>
 
-$$
-A =
-\begin{bmatrix}
-    5 & 4 & -2 \\
-    7 & 2 & 4 \\
-    3 & 2 & -6
-\end{bmatrix},
-\quad
-X =
-\begin{bmatrix}
-    x_1 \\ x_2 \\ x_3
-\end{bmatrix},
-\quad
-B =
-\begin{bmatrix}
-    5 \\ 7 \\ 3
-\end{bmatrix}
-$$
-
-<p>Persamaan dalam bentuk matriks:</p>
-
-$$
-A \cdot X = B
-$$
-
-<p>Untuk mendapatkan \( X \), kita cari \( A^{-1} \) sehingga:</p>
-
-$$
-X = A^{-1} B
-$$
-
-<h2>Langkah 2: Menghitung Invers Matriks</h2>
-
-<p>Misalkan kita menghitung determinan dan adjoint dari \( A \), lalu mendapatkan:</p>
-
-$$
-A^{-1} =
-\begin{bmatrix}
-    0.2 & -0.2 & 0.1 \\
-    -0.2 & 0.4 & -0.1 \\
-    0.1 & -0.1 & -0.1
-\end{bmatrix}
-$$
-
-<h2>Langkah 3: Menghitung \( X = A^{-1}B \)</h2>
-
-$$
-X =
-\begin{bmatrix}
-    1.0 \\ 0 \\ 0
-\end{bmatrix}
-$$
-
-<p>Sehingga nilai \( x_1 = 1 \), \( x_2 = 0 \), dan \( x_3 = 0 \).</p>
-
-
-    <script type="text/x-thebe-config">
+<h1>Contoh Invers Matriks</h1>
+    <a href = "invers_matriks.html"> invers matriks <br></a>
     {
         requestKernel: true,
         binderOptions: {
