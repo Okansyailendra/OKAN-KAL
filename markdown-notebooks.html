@@ -155,8 +155,8 @@
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
-    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="My sample book - Home"/>
+    <img src="_static/okan.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <img src="_static/okan.png" class="logo__image only-dark pst-js-only" alt="My sample book - Home"/>
   
   
 </a></div>
@@ -395,17 +395,17 @@ This page shows off a notebook written in MyST Markdown.</p>
 <section id="an-example-cell">
 <h2>Langkah 1: Menuliskan Matriks</h2>
 <p>Sistem persamaan diberikan dalam bentuk:</p>
-  <div>
-  \[
-  5x_1 + 4x_2 - 2x_3 &= 5 \\
-  7x_1 + 2x_2 + 4x_3 &= 7 \\
-  3x_1 + 2x_2 - 6x_3 &= 3
-  \]
-  </div>
+<div>
+$$
+  5x_1 + 4x_2 - 2x_3 = 5 \\
+  7x_1 + 2x_2 + 4x_3 = 7 \\
+  3x_1 + 2x_2 - 6x_3 = 3
+$$
+</div>
   
 <p>Kita tuliskan dalam bentuk matriks:</p>
 
-\[
+$$
 A =
 \begin{bmatrix}
     5 & 4 & -2 \\
@@ -422,41 +422,41 @@ B =
 \begin{bmatrix}
     5 \\ 7 \\ 3
 \end{bmatrix}
-\]
+$$
 
 <p>Persamaan dalam bentuk matriks:</p>
 
-\[
+$$
 A \cdot X = B
-\]
+$$
 
 <p>Untuk mendapatkan \( X \), kita cari \( A^{-1} \) sehingga:</p>
 
-\[
+$$
 X = A^{-1} B
-\]
+$$
 
 <h2>Langkah 2: Menghitung Invers Matriks</h2>
 
 <p>Misalkan kita menghitung determinan dan adjoint dari \( A \), lalu mendapatkan:</p>
 
-\[
+$$
 A^{-1} =
 \begin{bmatrix}
     0.2 & -0.2 & 0.1 \\
     -0.2 & 0.4 & -0.1 \\
     0.1 & -0.1 & -0.1
 \end{bmatrix}
-\]
+$$
 
 <h2>Langkah 3: Menghitung \( X = A^{-1}B \)</h2>
 
-\[
+$$
 X =
 \begin{bmatrix}
     1.0 \\ 0 \\ 0
 \end{bmatrix}
-\]
+$$
 
 <p>Sehingga nilai \( x_1 = 1 \), \( x_2 = 0 \), dan \( x_3 = 0 \).</p>
 
