@@ -352,12 +352,115 @@
   
 </div>
 </div>
-              
+ <h2>Inti Konsep Transformasi Matriks</h2>
+  <p>
+    Kita sudah membahas dasar-dasar menggambar vektor, dan aritmetika perkalian matriks.
+    Dalam bagian ini dan selanjutnya, kita akan kembali pada interpretasi geometris vektor yang telah dibahas pada Bab 2.
+    Tujuan kita adalah memperoleh pemahaman visual terhadap definisi perkalian matriks yang diberikan pada Bagian 4.2.
+    <br><br>
+    Meskipun secara aljabar definisi perkalian matriks tampak aneh pada awalnya, kita akan melihat bahwa definisi tersebut memungkinkan kita menggunakan matriks untuk mendefinisikan fungsi
+    yang mengubah satu vektor menjadi vektor lain, sebagaimana fungsi-fungsi yang telah Anda kenal dari SMA atau Kalkulus mengubah satu bilangan menjadi bilangan lain.
+    <br><br>
+    Dengan cara ini, kita dapat memvisualisasikan matriks dan perkalian matriks berdasarkan pengaruhnya terhadap vektor-vektor.
+    Diberikan sebuah matriks \( m \times n \) bernama \( A \), kita dapat mendefinisikan sebuah fungsi \( T \) yang menerima vektor kolom berukuran \( n \times 1 \), yaitu \( \vec{x} \in \mathbb{R}^n \),
+    dan menghasilkan vektor kolom berukuran \( m \times 1 \), yaitu \( \vec{y} \in \mathbb{R}^m \), menurut relasi:
+  </p>
+
+  <p style="text-align: center; font-size: 1.2em;">
+    \[ \vec{y} = T(\vec{x}) = A\vec{x} \]
+  </p>
+
+  <p>
+    Fungsi seperti ini dikenal sebagai <strong>transformasi matriks</strong>; ini merupakan contoh dari kelas fungsi yang lebih umum antara ruang vektor, yang disebut <strong>transformasi linear</strong>.
+    <br><br>
+    Representasi grafis dari vektor memungkinkan kita memvisualisasikan transformasi matriks (setidaknya dalam dimensi rendah).
+    Visualisasi ini sangat penting dalam berbagai aplikasi, seperti grafika komputer.
+    Kita juga akan melihat bahwa keinginan untuk mendefinisikan fungsi melalui perkalian matriks memberikan alasan kuat mengapa definisi perkalian matriks dibuat seperti itu.
+  </p>
+
+  <ul>
+    <li>Transformasi linear: fungsi dalam bentuk \( T(\vec{x}) = A\vec{x} \), di mana \( A \) adalah matriks dan \( \vec{x} \) adalah vektor.</li>
+    <li>Ciri-ciri:
+      <ul>
+        <li>Penjumlahan: \( T(\vec{x} + \vec{y}) = T(\vec{x}) + T(\vec{y}) \)</li>
+        <li>Perkalian skalar: \( T(c\vec{x}) = cT(\vec{x}) \)</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2>Transformasi Geometris Umum</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Jenis Transformasi</th>
+        <th>Matriks Representasi</th>
+        <th>Efek Geometris</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Rotasi \( \theta \)</td>
+        <td>\( \begin{bmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{bmatrix} \)</td>
+        <td>Memutar bidang</td>
+      </tr>
+      <tr>
+        <td>Refleksi sumbu-x</td>
+        <td>\( \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix} \)</td>
+        <td>Cermin terhadap sumbu-x</td>
+      </tr>
+      <tr>
+        <td>Refleksi sumbu-y</td>
+        <td>\( \begin{bmatrix} -1 & 0 \\ 0 & 1 \end{bmatrix} \)</td>
+        <td>Cermin terhadap sumbu-y</td>
+      </tr>
+      <tr>
+        <td>Stretch horizontal</td>
+        <td>\( \begin{bmatrix} k & 0 \\ 0 & 1 \end{bmatrix} \)</td>
+        <td>Melebar horizontal</td>
+      </tr>
+      <tr>
+        <td>Stretch vertikal</td>
+        <td>\( \begin{bmatrix} 1 & 0 \\ 0 & k \end{bmatrix} \)</td>
+        <td>Melebar vertikal</td>
+      </tr>
+      <tr>
+        <td>Shear horizontal</td>
+        <td>\( \begin{bmatrix} 1 & k \\ 0 & 1 \end{bmatrix} \)</td>
+        <td>Miring ke samping</td>
+      </tr>
+      <tr>
+        <td>Shear vertikal</td>
+        <td>\( \begin{bmatrix} 1 & 0 \\ k & 1 \end{bmatrix} \)</td>
+        <td>Miring ke atas/bawah</td>
+      </tr>
+      <tr>
+        <td>Proyeksi ke sumbu-x</td>
+        <td>\( \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix} \)</td>
+        <td>Menjatuhkan ke sumbu-x</td>
+      </tr>
+      <tr>
+        <td>Proyeksi ke sumbu-y</td>
+        <td>\( \begin{bmatrix} 0 & 0 \\ 0 & 1 \end{bmatrix} \)</td>
+        <td>Menjatuhkan ke sumbu-y</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Transformasi Gabungan</h2>
+  <ul>
+    <li>Gabungan transformasi dilakukan dengan mengalikan matriks secara berurutan.</li>
+    <li>Urutan penting: \( AB \neq BA \).</li>
+    <li>Contoh: Refleksi → shear → rotasi → stretch → hasilnya berbeda tergantung urutan.</li>
+  </ul>
+
+  <h2>Aplikasi</h2>
+  <ul>
+    <li>Digunakan dalam grafika komputer, animasi, machine learning, dan fisika.</li>
+    <li>Visualisasi menggunakan unit square membantu memahami efek transformasi secara menyeluruh.</li>
+  </ul>             
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>sistem persamaan linier</h1>
-    <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
