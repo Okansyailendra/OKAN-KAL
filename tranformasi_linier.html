@@ -65,7 +65,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="invers matriks" href="markdown-notebooks.html" />
+    <link rel="prev" title="tranformasi matriks" href="tranformasi_matriks.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -349,73 +349,63 @@
   
 </div>
 </div>
-<body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width:800px; margin:20px auto; background:#f9f9f9; color:#222; line-height:1.6; padding:20px; border-radius:8px; box-shadow:0 0 15px rgba(0,0,0,0.1);">
-  <h1 style="text-align:center; color:#2c3e50;">Rangkuman Transformasi Linier</h1>
-  
-  <h2 style="color:#34495e; border-bottom:2px solid #2980b9; padding-bottom:4px; margin-top:30px;">1. Pengantar Transformasi Linier</h2>
-  <p><strong>Definisi:</strong></p>
-  <ul style="margin-top:0; margin-bottom:16px; padding-left:20px;">
-    <li>Transformasi linier adalah fungsi yang memetakan ruang vektor <code>T: V → W</code>.</li>
-    <li>Fungsi ini mengubah vektor dari satu ruang ke ruang lainnya dengan mempertahankan struktur aljabar.</li>
-  </ul>
-  <p><strong>Contoh Fungsi:</strong></p>
-  <ul style="margin-top:0; margin-bottom:16px; padding-left:20px;">
-    <li>Fungsi dari <code>R²</code> ke <code>R²</code>: <code>T(v₁, v₂) = (v₁ + v₂, v₁ - v₂)</code></li>
-  </ul>
-  <p><strong>Operasi:</strong></p>
-  <ul style="margin-top:0; margin-bottom:16px; padding-left:20px;">
-    <li><strong>Mencari Bayangan:</strong> Contoh vektor <code>v = (-1, 2)</code>, hitung <code>T(v)</code>.</li>
-    <li><strong>Mencari Prabayangan:</strong> Contoh vektor <code>w = (-1, 11)</code>, cari <code>v</code> sehingga <code>T(v) = w</code>.</li>
-  </ul>
-  
-  <h2 style="color:#34495e; border-bottom:2px solid #2980b9; padding-bottom:4px; margin-top:30px;">2. Sifat Transformasi Linier</h2>
-  <p><strong>Sifat Utama:</strong></p>
-  <ul style="margin-top:0; margin-bottom:16px; padding-left:20px;">
-    <li><strong>Penjumlahan:</strong> <code>T(v + u) = T(v) + T(u)</code> untuk semua <code>v, u ∈ V</code>.</li>
-    <li><strong>Perkalian Skalar:</strong> <code>T(cu) = cT(u)</code> untuk semua vektor <code>u</code>, skalar <code>c</code>.</li>
-  </ul>
-  <p><strong>Catatan:</strong> Disebut juga operator linear.</p>
-  
-  <h2 style="color:#34495e; border-bottom:2px solid #2980b9; padding-bottom:4px; margin-top:30px;">3. Verifikasi Transformasi Linier</h2>
-  <p>Verifikasi fungsi <code>T</code> dengan membuktikan kedua sifat di atas.</p>
+<h1>Transformasi Linier</h1>
 
-  <h2 style="color:#34495e; border-bottom:2px solid #2980b9; padding-bottom:4px; margin-top:30px;">4. Contoh Fungsi yang Bukan Transformasi Linier</h2>
-  <ul style="margin-top:0; margin-bottom:16px; padding-left:20px;">
-    <li><code>f(x) = sin(x)</code> tidak linier karena tidak memenuhi penjumlahan.</li>
-    <li><code>f(x) = x²</code> tidak linier karena tidak memenuhi sifat perkalian skalar.</li>
-  </ul>
-  <p>Penting dalam aplikasi matematika dan fisika.</p>
+<h2>1. Pengantar Transformasi Linier</h2>
+<ul>
+  <li><strong>Definisi:</strong> Transformasi linier adalah fungsi yang memetakan ruang vektor <em>V</em> ke ruang vektor <em>W</em>, dinyatakan sebagai T: V → W. Fungsi ini mengubah vektor dari satu ruang ke ruang lainnya dengan mempertahankan struktur aljabar.</li>
+  <li><strong>Contoh Fungsi:</strong> Fungsi dari R² ke R² yang didefinisikan sebagai T(v₁, v₂) = (v₁ + v₂, v₁ - v₂).</li>
+  <li><strong>Operasi:</strong>
+    <ul>
+      <li><em>Mencari Bayangan:</em> Contoh: Untuk v = (-1, 2), bayangan T(v) dihitung dengan substitusi ke dalam fungsi T.</li>
+      <li><em>Mencari Prabayangan:</em> Contoh: Untuk w = (-1, 11), prabayangan vektor yang dipetakan ke w dicari dengan menyelesaikan persamaan T(v) = w.</li>
+    </ul>
+  </li>
+</ul>
 
-  <h2 style="color:#34495e; border-bottom:2px solid #2980b9; padding-bottom:4px; margin-top:30px;">5. Jenis Transformasi Linier</h2>
-  <ul style="margin-top:0; margin-bottom:16px; padding-left:20px;">
-    <li><strong>Transformasi Nol:</strong> Semua vektor dipetakan ke nol (<code>T(v) = 0</code>).</li>
-    <li><strong>Transformasi Identitas:</strong> Vektor dipetakan ke dirinya sendiri (<code>T(v) = v</code>).</li>
-  </ul>
+<h2>2. Sifat Transformasi Linier</h2>
+<ul>
+  <li><strong>Sifat Utama:</strong>
+    <ul>
+      <li><em>Penjumlahan:</em> T(v + u) = T(v) + T(u) untuk semua v, u ∈ V.</li>
+      <li><em>Perkalian Skalar:</em> T(cu) = cT(u) untuk semua vektor <em>u</em> dan skalar <em>c</em>.</li>
+    </ul>
+  </li>
+  <li><strong>Catatan:</strong> Transformasi linier disebut juga operator linear yang mempertahankan struktur aljabar.</li>
+</ul>
 
-  <h2 style="color:#34495e; border-bottom:2px solid #2980b9; padding-bottom:4px; margin-top:30px;">6. Matriks untuk Transformasi Linier</h2>
-  <p>Representasi matriks <code>A</code> sehingga <code>T(v) = Av</code>.</p>
+<h2>3. Verifikasi Transformasi Linier</h2>
+<p>Verifikasi dilakukan dengan membuktikan sifat penjumlahan dan perkalian skalar untuk fungsi yang dimaksud.</p>
 
-  <h2 style="color:#34495e; border-bottom:2px solid #2980b9; padding-bottom:4px; margin-top:30px;">7. Rotasi dan Proyeksi</h2>
-  <ul style="margin-top:0; margin-bottom:16px; padding-left:20px;">
-    <li><strong>Rotasi R²:</strong> <code>A = [cos(θ) -sin(θ); sin(θ) cos(θ)]</code>, memutar vektor berlawanan arah jarum jam sudut θ.</li>
-    <li><strong>Proyeksi R³:</strong> <code>A = [0 0 0; 0 1 0; 0 0 1]</code>, memproyeksikan ke bidang tertentu.</li>
-  </ul>
+<h2>4. Contoh Fungsi yang Bukan Transformasi Linier</h2>
+<ul>
+  <li>f(x) = sin(x), tidak memenuhi sifat penjumlahan.</li>
+  <li>f(x) = x², tidak memenuhi sifat perkalian skalar.</li>
+</ul>
 
-  <h2 style="color:#34495e; border-bottom:2px solid #2980b9; padding-bottom:4px; margin-top:30px;">8. Invers Transformasi Linier</h2>
-  <p>Memiliki invers <code>T⁻¹</code> jika <code>T(T⁻¹(v)) = v</code> untuk semua <code>v</code>.</p>
+<h2>5. Jenis Transformasi Linier</h2>
+<ul>
+  <li><em>Transformasi Nol:</em> Memetakan semua vektor ke nol: T(v) = 0.</li>
+  <li><em>Transformasi Identitas:</em> Memetakan setiap vektor ke dirinya sendiri: T(v) = v.</li>
+</ul>
 
-  <h2 style="color:#34495e; border-bottom:2px solid #2980b9; padding-bottom:4px; margin-top:30px;">9. Matriks Relatif dan Perbandingan Matriks</h2>
-  <ul style="margin-top:0; margin-bottom:16px; padding-left:20px;">
-    <li>Matriks relatif basis nonstandar dengan perubahan basis.</li>
-    <li>Perbandingan matriks transformasi basis berbeda.</li>
-  </ul>
+<h2>6. Matriks untuk Transformasi Linier</h2>
+<p>Transformasi linier dapat dinyatakan dengan matriks <em>A</em>, sehingga T(v) = Av.</p>
 
-  <h2 style="color:#34495e; border-bottom:2px solid #2980b9; padding-bottom:4px; margin-top:30px;">10. Catatan tentang Matriks Diagonal</h2>
-  <p>Matriks diagonal dengan elemen non-nol hanya diagonal utama, penting dalam analisis sistem dan transformasi.</p>
+<h2>7. Rotasi dan Proyeksi</h2>
+<ul>
+  <li><em>Rotasi dalam R²:</em> Dinyatakan dengan matriks rotasi: <br />A = [cos(θ) -sin(θ); sin(θ) cos(θ)].</li>
+  <li><em>Proyeksi dalam R³:</em> Dinyatakan dengan matriks proyeksi: <br />A = [0 0 0; 0 1 0; 0 0 1].</li>
+</ul>
 
-  <h2 style="color:#34495e; margin-top:40px;">Kesimpulan</h2>
-  <p>File ini memberikan pemahaman mendalam terkait konsep dan aplikasi transformasi linier yang sangat berguna dalam matematika dan ilmu terapan.</p>
+<h2>8. Invers Transformasi Linier</h2>
+<p>Transformasi linier memiliki invers T⁻¹ jika T(T⁻¹(v)) = v untuk semua v ∈ V.</p>
 
+<h2>9. Matriks Relatif dan Perbandingan Matriks</h2>
+<p>Menemukan matriks relatif terhadap basis nonstandar dan membandingkan dua matriks transformasi.</p>
+
+<h2>10. Catatan tentang Matriks Diagonal</h2>
+<p>Matriks diagonal adalah matriks dengan elemen non-nol hanya pada diagonal utama dan banyak digunakan dalam transformasi linier.</p>
               
 
 <div id="jb-print-docs-body" class="onlyprint">
@@ -481,12 +471,12 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="markdown-notebooks.html"
+       href="tranformasi_matriks.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">invers matriks</p>
+        <p class="prev-next-title">tranformasi matriks</p>
       </div>
     </a>
 </div>
